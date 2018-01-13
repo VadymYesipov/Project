@@ -11,10 +11,12 @@ public class Order {
 
     private Car car;
 
-    private User user;
+    private Person person;
 
     private Date since;
     private Date till;
 
     private Driver driver;
+
+    private Double price;
 }

@@ -1,19 +1,16 @@
 package ua.khpi.yesipov.project;
 
-import ua.khpi.yesipov.project.DAOFactories.DAOFactory;
-import ua.khpi.yesipov.project.DAOFactories.MySqlDAOFactory;
-
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-        MySqlDAOFactory mySqlDAOFactory = (MySqlDAOFactory) DAOFactory.getDAOFactory(1);
-        try {
-            Statement statement = MySqlDAOFactory.createConnection().createStatement();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) throws SQLException {
+        System.out.println("Which car do you want to rent?");
+        BusinessLogic businessLogic = new BusinessLogic();
+        businessLogic.getCarTable();
+        Scanner scanner = new Scanner(System.in);
+        businessLogic.makeOrder(scanner);
+        businessLogic.showOrders();
     }
 }

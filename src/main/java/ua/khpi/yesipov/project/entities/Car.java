@@ -15,7 +15,9 @@ public class Car {
 
     private Quality quality;
 
-    private Date hours;
+    private Integer hours;
 
     private Double price;
+
+    private Boolean isOrdered;
 }
