@@ -1,9 +1,8 @@
-package ua.khpi.yesipov.project.factories.entities;
+package ua.khpi.yesipov.project.persistence.dao.impl;
 
-import ua.khpi.yesipov.project.entities.Role;
-import ua.khpi.yesipov.project.factories.interfaces.RoleDAO;
+import ua.khpi.yesipov.project.persistence.domain.Role;
+import ua.khpi.yesipov.project.persistence.dao.RoleDAO;
 
-import javax.sql.RowSet;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

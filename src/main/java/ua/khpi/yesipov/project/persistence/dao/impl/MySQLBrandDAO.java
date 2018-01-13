@@ -1,7 +1,7 @@
-package ua.khpi.yesipov.project.factories.entities;
+package ua.khpi.yesipov.project.persistence.dao.impl;
 
-import ua.khpi.yesipov.project.entities.Brand;
-import ua.khpi.yesipov.project.factories.interfaces.BrandDAO;
+import ua.khpi.yesipov.project.persistence.domain.Brand;
+import ua.khpi.yesipov.project.persistence.dao.BrandDAO;
 
 import javax.sql.RowSet;
 import java.sql.Connection;

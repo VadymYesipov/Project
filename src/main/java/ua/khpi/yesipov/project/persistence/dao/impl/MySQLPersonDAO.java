@@ -1,7 +1,7 @@
-package ua.khpi.yesipov.project.factories.entities;
+package ua.khpi.yesipov.project.persistence.dao.impl;
 
-import ua.khpi.yesipov.project.entities.Person;
-import ua.khpi.yesipov.project.factories.interfaces.PersonDAO;
+import ua.khpi.yesipov.project.persistence.domain.Person;
+import ua.khpi.yesipov.project.persistence.dao.PersonDAO;
 
 import javax.sql.RowSet;
 import java.sql.Connection;

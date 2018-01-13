@@ -1,9 +1,8 @@
-package ua.khpi.yesipov.project.factories.entities;
+package ua.khpi.yesipov.project.persistence.dao.impl;
 
-import ua.khpi.yesipov.project.entities.Order;
-import ua.khpi.yesipov.project.factories.interfaces.OrderDAO;
+import ua.khpi.yesipov.project.persistence.domain.Order;
+import ua.khpi.yesipov.project.persistence.dao.OrderDAO;
 
-import javax.sql.RowSet;
 import java.sql.*;
 
 public class MySQLOrderDAO implements OrderDAO {

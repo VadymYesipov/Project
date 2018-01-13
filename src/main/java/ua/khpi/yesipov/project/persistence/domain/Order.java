@@ -1,4 +1,4 @@
-package ua.khpi.yesipov.project.entities;
+package ua.khpi.yesipov.project.persistence.domain;
 
 import lombok.Data;
 

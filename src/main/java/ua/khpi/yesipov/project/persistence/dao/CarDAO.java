@@ -1,6 +1,6 @@
-package ua.khpi.yesipov.project.factories.interfaces;
+package ua.khpi.yesipov.project.persistence.dao;
 
-import ua.khpi.yesipov.project.entities.Car;
+import ua.khpi.yesipov.project.persistence.domain.Car;
 
 import java.sql.ResultSet;
 

@@ -1,12 +1,11 @@
 package ua.khpi.yesipov.project;
 
-import ua.khpi.yesipov.project.entities.*;
-import ua.khpi.yesipov.project.factories.DAOFactory;
 import ua.khpi.yesipov.project.factories.MySqlDAOFactory;
-import ua.khpi.yesipov.project.factories.interfaces.CarDAO;
-import ua.khpi.yesipov.project.factories.interfaces.OrderDAO;
-import ua.khpi.yesipov.project.factories.interfaces.PersonDAO;
-import ua.khpi.yesipov.project.factories.interfaces.RoleDAO;
+import ua.khpi.yesipov.project.persistence.dao.CarDAO;
+import ua.khpi.yesipov.project.persistence.dao.OrderDAO;
+import ua.khpi.yesipov.project.persistence.dao.PersonDAO;
+import ua.khpi.yesipov.project.persistence.dao.RoleDAO;
+import ua.khpi.yesipov.project.persistence.domain.*;
 
 import java.sql.Date;
 import java.sql.ResultSet;
@@ -37,7 +36,6 @@ public class BusinessLogic {
         orderedCars = new Car[10];
         orders = new Order[10];
         roles = new Role[10];
-        mySqlDAOFactory = (MySqlDAOFactory) DAOFactory.getDAOFactory(1);
         carDAO = mySqlDAOFactory.getCarDAO();
         roleDAO = mySqlDAOFactory.getRoleDAO();
         orderDAO = mySqlDAOFactory.getOrderDAO();

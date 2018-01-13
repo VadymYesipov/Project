@@ -1,6 +1,6 @@
-package ua.khpi.yesipov.project.factories.interfaces;
+package ua.khpi.yesipov.project.persistence.dao;
 
-import ua.khpi.yesipov.project.entities.Role;
+import ua.khpi.yesipov.project.persistence.domain.Role;
 
 import java.sql.ResultSet;
 

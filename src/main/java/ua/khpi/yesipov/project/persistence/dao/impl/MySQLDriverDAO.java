@@ -1,7 +1,7 @@
-package ua.khpi.yesipov.project.factories.entities;
+package ua.khpi.yesipov.project.persistence.dao.impl;
 
-import ua.khpi.yesipov.project.entities.Driver;
-import ua.khpi.yesipov.project.factories.interfaces.DriverDAO;
+import ua.khpi.yesipov.project.persistence.domain.Driver;
+import ua.khpi.yesipov.project.persistence.dao.DriverDAO;
 
 import javax.sql.RowSet;
 import java.sql.Connection;

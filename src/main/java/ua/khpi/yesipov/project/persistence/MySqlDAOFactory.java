@@ -1,13 +1,13 @@
 package ua.khpi.yesipov.project.factories;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
-import ua.khpi.yesipov.project.factories.entities.*;
-import ua.khpi.yesipov.project.factories.interfaces.*;
+import ua.khpi.yesipov.project.persistence.dao.*;
+import ua.khpi.yesipov.project.persistence.dao.impl.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class MySqlDAOFactory extends DAOFactory {
+public class MySqlDAOFactory implements DAOFactory {
 
     public static final String DRIVER =
             "com.mysql.jdbc.Driver";
