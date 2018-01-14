@@ -2,16 +2,20 @@ package ua.khpi.yesipov.project.persistence.dao.impl;
 
 import ua.khpi.yesipov.project.persistence.domain.Person;
 import ua.khpi.yesipov.project.persistence.dao.PersonDAO;
+import ua.khpi.yesipov.project.persistence.domain.Role;
 
 import javax.sql.RowSet;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class MySQLPersonDAO implements PersonDAO {
 
     private Connection connection;
     private PreparedStatement preparedStatement;
+    private ResultSet resultSet;
 
     public MySQLPersonDAO(Connection connection) {
         this.connection = connection;
@@ -31,7 +35,10 @@ public class MySQLPersonDAO implements PersonDAO {
             preparedStatement.setString(7, person.getLogin());
             preparedStatement.setString(8, person.getPassword());
 
-            return preparedStatement.executeUpdate();
+            int updated = preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+            return updated;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -42,7 +49,44 @@ public class MySQLPersonDAO implements PersonDAO {
         return false;
     }
 
-    public Person findPerson(int id) {
+    public Person findPerson(String login, String password) {
+        try {
+            preparedStatement = connection.prepareStatement("SELECT person.id, role.id, role.role, first_name, middle_name, last_name, birthday, login, password " +
+                    "FROM orders.person person  " +
+                    "LEFT JOIN orders.role role on person.role_id=role.id " +
+                    "WHERE login=? and password=?;");
+
+            preparedStatement.setString(1, login);
+            preparedStatement.setString(2, password);
+
+            resultSet = preparedStatement.executeQuery();
+
+            Person person = new Person();
+            if (resultSet.next()) {
+                person.setId(resultSet.getInt(1));
+
+                Role role = new Role();
+                role.setId(resultSet.getInt(2));
+                role.setRole(resultSet.getString(3));
+                person.setRole(role);
+
+                person.setFirstName(resultSet.getString(4));
+                person.setMiddleName(resultSet.getString(5));
+                person.setLastName(resultSet.getString(6));
+                person.setBirthday(resultSet.getDate(7));
+
+                person.setLogin(resultSet.getString(8));
+                person.setPassword(resultSet.getString(9));
+            }
+
+            resultSet.close();
+            preparedStatement.close();
+            //connection.close();
+
+            return person;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -50,7 +94,28 @@ public class MySQLPersonDAO implements PersonDAO {
         return false;
     }
 
-    public RowSet selectPerson() {
+    public List<Person> selectPerson() {
         return null;
+    }
+
+    public int selectCount() {
+        try {
+            preparedStatement = connection.prepareStatement("SELECT COUNT(*) as total FROM orders.person;");
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            int count = 0;
+            if (resultSet.next()) {
+                count = resultSet.getInt("total");
+            }
+
+            resultSet.close();
+            preparedStatement.close();
+            //connection.close();
+
+            return count;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 }

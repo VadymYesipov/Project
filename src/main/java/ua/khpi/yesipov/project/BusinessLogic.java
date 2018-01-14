@@ -1,130 +1,81 @@
 package ua.khpi.yesipov.project;
 
-import ua.khpi.yesipov.project.factories.MySqlDAOFactory;
-import ua.khpi.yesipov.project.persistence.dao.CarDAO;
-import ua.khpi.yesipov.project.persistence.dao.OrderDAO;
-import ua.khpi.yesipov.project.persistence.dao.PersonDAO;
-import ua.khpi.yesipov.project.persistence.dao.RoleDAO;
+import ua.khpi.yesipov.project.persistence.MySqlDAOFactory;
+import ua.khpi.yesipov.project.persistence.dao.*;
 import ua.khpi.yesipov.project.persistence.domain.*;
 
 import java.sql.Date;
-import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Scanner;
 
 public class BusinessLogic {
 
-    private MySqlDAOFactory mySqlDAOFactory;
+    private MySqlDAOFactory mySqlDAOFactory = new MySqlDAOFactory();
 
-    private CarDAO carDAO;
+    private CarDAO carDAO = mySqlDAOFactory.getCarDAO();
 
-    private RoleDAO roleDAO;
+    private RoleDAO roleDAO = mySqlDAOFactory.getRoleDAO();
 
-    private OrderDAO orderDAO;
+    private OrderDAO orderDAO = mySqlDAOFactory.getOrderDAO();
 
-    private PersonDAO personDAO;
+    private PersonDAO personDAO = mySqlDAOFactory.getPersonDAO();
 
-    private static Car[] cars;
-    private static Car[] orderedCars;
+    private DriverDAO driverDAO = mySqlDAOFactory.getDriverDAO();
 
-    private static Order[] orders;
+    private static List<Car> cars;
 
-    private static Role[] roles;
+    private static List<Order> orders;
+
+    private static List<Role> roles;
+
+    private static List<Driver> drivers;
 
     public BusinessLogic() {
-        cars = new Car[14];
-        orderedCars = new Car[10];
-        orders = new Order[10];
-        roles = new Role[10];
-        carDAO = mySqlDAOFactory.getCarDAO();
-        roleDAO = mySqlDAOFactory.getRoleDAO();
-        orderDAO = mySqlDAOFactory.getOrderDAO();
-        personDAO = mySqlDAOFactory.getPersonDAO();
-        getAllCars();
-        getAllRoles();
-    }
+        roles = roleDAO.selectRoles();
+        drivers = driverDAO.selectDrivers();
 
-    private void getAllRoles() {
-        ResultSet resultSet = roleDAO.selectRoles();
-        try {
-            for (int i = 0; resultSet.next(); i++) {
-                Role role = new Role();
-                role.setId(resultSet.getInt(1));
-                role.setRole(resultSet.getString(2));
-                roles[i] = role;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void getAllCars() {
-        ResultSet resultSet = carDAO.selectAllCars();
-        try {
-            for (int i = 0; resultSet.next(); i++) {
-                Car car = new Car();
-                car.setId(resultSet.getInt(1));
-
-                Brand brand = new Brand();
-                brand.setBrand(resultSet.getString(2));
-                car.setBrand(brand);
-
-                car.setName(resultSet.getString(3));
-
-                Quality quality = new Quality();
-                quality.setQuality(resultSet.getString(4));
-                car.setQuality(quality);
-
-                car.setHours(resultSet.getInt(5));
-                car.setPrice(resultSet.getDouble(6));
-                if (resultSet.getInt(7) == 0) {
-                    car.setIsOrdered(false);
-                } else {
-                    car.setIsOrdered(true);
+        System.out.println("Do you have a login?");
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.next().equalsIgnoreCase("no")) {
+            register(scanner);
+        } else {
+            System.out.println("Type in your login");
+            String login = scanner.next();
+            System.out.println("Type in your password");
+            String password = scanner.next();
+            person = personDAO.findPerson(login, password);
+            if (person.getFirstName() != null) {
+                System.out.println("Welcome");
+                System.out.println("Your previous orders:");
+                try {
+                    showOrders();
+                } catch (SQLException e) {
+                    e.printStackTrace();
                 }
-                cars[i] = car;
+            } else {
+                System.out.println("Goodbye");
+                System.exit(0);
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        }
+        cars = carDAO.selectCars();//carDAO.selectSortedByModel();carDAO.selectSortedByPrice();carDAO.selectCarsByBrand("Audi");carDAO.selectCarsByQuality("good");
+        System.out.println("Which car do you want to rent");
+        for (Car car : cars) {
+            System.out.println(car);
         }
     }
-
-    public void getCarTable() throws SQLException {
-        ResultSet resultSet = carDAO.selectCars();
-        while (resultSet.next()) {
-            System.out.println(resultSet.getInt(1) + ": " +
-            resultSet.getString(2) + " " + resultSet.getString(3) + ", quality " +
-            resultSet.getString(4) + ", price: " + resultSet.getDouble(6) + "$");
-        }
-    }
-
-    private static int id;
 
     public void makeOrder(Scanner scanner) {
         OrderDAO orderDAO = mySqlDAOFactory.getOrderDAO();
         Order order = new Order();
 
-        order.setId(++id);
+        order.setId(orderDAO.selectCount() + 1);
 
-        int i = scanner.nextInt();
-        orderedCars[i] = cars[i];
-        order.setCar(orderedCars[i]);
+        int i = scanner.nextInt() - 1;
+        cars.get(i).setIsOrdered(1);
+        carDAO.updateCar(cars.get(i));
+        order.setCar(cars.get(i));
 
-        Person person = new Person();
-        person.setId(++id);
-        person.setBirthday(new Date(System.currentTimeMillis()));
-        person.setRole(roles[1]);
-        System.out.println("What's your first name?");
-        person.setFirstName(scanner.next());
-        System.out.println("What's your middle name?");
-        person.setMiddleName(scanner.next());
-        System.out.println("What's your last name?");
-        person.setLastName(scanner.next());
-        System.out.println("What's your login?");
-        person.setLogin(scanner.next());
-        System.out.println("What's your password?");
-        person.setPassword(scanner.next());
-        personDAO.insertPerson(person);
         order.setPerson(person);
 
         long since = System.currentTimeMillis();
@@ -133,24 +84,63 @@ public class BusinessLogic {
         long till = since + 3600000 * scanner.nextInt();
         order.setTill(new Date(till));
 
-        double price = ((till - since) / 3600000) * orderedCars[i].getPrice();
+        double price = ((till - since) / 3600000) * cars.get(i).getPrice();
         order.setPrice(price);
 
+        System.out.println("Do you want to have a driver");
         Driver driver = new Driver();
-        driver.setId(1);
+        if (scanner.next().equalsIgnoreCase("yes")) {
+            System.out.println("Which driver do you want to rent?");
+            for (int j = 0; j < drivers.size(); j++) {
+                System.out.println(drivers.get(j));
+            }
+            driver = drivers.get(scanner.nextInt() - 2);
+            driver.setIsBusy(1);
+            driverDAO.updateDriver(driver);
+        } else {
+            driver.setId(1);
+        }
         order.setDriver(driver);
 
         orderDAO.insertOrder(order);
     }
 
     public void showOrders() throws SQLException {
-        ResultSet resultSet = orderDAO.selectOrders();
-        System.out.println("The orders:");
-        while (resultSet.next()) {
-            System.out.println(resultSet.getInt(1) + ": " +
-            resultSet.getString(2) + ", user: " + resultSet.getString(3) + ", " + resultSet.getString(4) + ", " + resultSet.getString(5) + ", " +
-            resultSet.getDate(6) + ", " + resultSet.getString(7) + ", " + resultSet.getString(8) + "; since " +
-            resultSet.getDate(9) + " till " + resultSet.getDate(10) + "; price: " + resultSet.getDouble(11));
+        orders = orderDAO.selectOrders(person.getId());
+
+        for (Order order : orders) {
+            System.out.println(order);
+        }
+    }
+
+    private Person person;
+
+    private void register(Scanner scanner) {
+        person = new Person();
+        person.setId(personDAO.selectCount() + 1);
+
+        person.setBirthday(new Date(System.currentTimeMillis()));
+
+        person.setRole(roles.get(1));
+
+        System.out.println("What's your first name?");
+        person.setFirstName(scanner.next());
+        System.out.println("What's your middle name?");
+        person.setMiddleName(scanner.next());
+        System.out.println("What's your last name?");
+        person.setLastName(scanner.next());
+        System.out.println("What's your login?");
+        String login = scanner.next();
+        person.setLogin(login);
+        System.out.println("What's your password?");
+        String password = scanner.next();
+        person.setPassword(password);
+
+        person = personDAO.findPerson(login, password);
+
+        if (person.getFirstName() == null) {
+            System.out.println("Goodbye");
+            System.exit(0);
         }
     }
 }

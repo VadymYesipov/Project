@@ -3,6 +3,7 @@ package ua.khpi.yesipov.project.persistence.dao;
 import ua.khpi.yesipov.project.persistence.domain.Brand;
 
 import javax.sql.RowSet;
+import java.util.List;
 
 public interface BrandDAO {
 
@@ -14,5 +15,5 @@ public interface BrandDAO {
 
     public boolean updateBrands(Brand brand);
 
-    public RowSet selectBrand();
+    public List<Brand> selectBrand();
 }

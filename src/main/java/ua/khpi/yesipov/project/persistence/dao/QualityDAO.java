@@ -3,6 +3,7 @@ package ua.khpi.yesipov.project.persistence.dao;
 import ua.khpi.yesipov.project.persistence.domain.Quality;
 
 import javax.sql.RowSet;
+import java.util.List;
 
 public interface QualityDAO {
 
@@ -14,5 +15,5 @@ public interface QualityDAO {
 
     public boolean updateQuality(Quality quality);
 
-    public RowSet selectQualities();
+    public List<Quality> selectQualities();
 }

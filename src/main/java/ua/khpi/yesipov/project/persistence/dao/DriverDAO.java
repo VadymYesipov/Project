@@ -3,6 +3,7 @@ package ua.khpi.yesipov.project.persistence.dao;
 import ua.khpi.yesipov.project.persistence.domain.Driver;
 
 import javax.sql.RowSet;
+import java.util.List;
 
 public interface DriverDAO {
 
@@ -12,7 +13,7 @@ public interface DriverDAO {
 
     public Driver findDriver(int id);
 
-    public boolean updateDriver(Driver driver);
+    public int updateDriver(Driver driver);
 
-    public RowSet selectDrivers();
+    public List<Driver> selectDrivers();
 }

@@ -5,6 +5,7 @@ import ua.khpi.yesipov.project.persistence.dao.BrandDAO;
 
 import javax.sql.RowSet;
 import java.sql.Connection;
+import java.util.List;
 
 public class MySQLBrandDAO implements BrandDAO{
 
@@ -30,7 +31,7 @@ public class MySQLBrandDAO implements BrandDAO{
         return false;
     }
 
-    public RowSet selectBrand() {
+    public List<Brand> selectBrand() {
         return null;
     }
 }

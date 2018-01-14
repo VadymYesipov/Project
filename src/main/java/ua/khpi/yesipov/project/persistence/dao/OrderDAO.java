@@ -3,6 +3,7 @@ package ua.khpi.yesipov.project.persistence.dao;
 import ua.khpi.yesipov.project.persistence.domain.Order;
 
 import java.sql.ResultSet;
+import java.util.List;
 
 public interface OrderDAO {
 
@@ -14,5 +15,9 @@ public interface OrderDAO {
 
     public boolean updateOrder(Order order);
 
-    public ResultSet selectOrders();
+    public List<Order> selectAllOrders();
+
+    public List<Order> selectOrders(int id);
+
+    public int selectCount();
 }

@@ -3,6 +3,7 @@ package ua.khpi.yesipov.project.persistence.dao;
 import ua.khpi.yesipov.project.persistence.domain.Role;
 
 import java.sql.ResultSet;
+import java.util.List;
 
 public interface RoleDAO {
 
@@ -14,5 +15,5 @@ public interface RoleDAO {
 
     public boolean updateRole(Role role);
 
-    public ResultSet selectRoles();
+    public List<Role> selectRoles();
 }

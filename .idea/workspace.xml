@@ -24,7 +24,18 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,6 +50,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>cloud</find>
+      <find>driver</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -52,22 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Model.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Quality.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Driver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Car.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Order.java" />
-        <option value="$PROJECT_DIR$/main.html" />
-        <option value="$PROJECT_DIR$/sign_in.html" />
-        <option value="$PROJECT_DIR$/sing_up.html" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/entities/Driver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/entities/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/entities/Model.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/entities/Brand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/DAOFactories/DAOInterfaces/BrandDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/DAOFactories/DAOInterfaces/CarDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/DAOFactories/DAOInterfaces/DriverDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/DAOFactories/DAOInterfaces/OrderDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/DAOFactories/DAOInterfaces/QualityDAO.java" />
@@ -90,19 +86,35 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/entities/MySQLCarDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/interfaces/RoleDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/interfaces/OrderDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Main.java" />
-        <option value="$PROJECT_DIR$/sql_scripts/car.txt" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/entities/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/interfaces/PersonDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/entities/MySQLOrderDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/entities/MySQLPersonDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/entities/MySQLRoleDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/RoleDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLRoleDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/BusinessLogic.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/DAOFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/MySqlDAOFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/domain/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/BrandDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/QualityDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/RoleDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLBrandDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLQualityDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLRoleDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/domain/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/DAOFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/MySqlDAOFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/domain/Driver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/PersonDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/OrderDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/DriverDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLOrderDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLDriverDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLPersonDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/BusinessLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/CarDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLCarDAO.java" />
+        <option value="$PROJECT_DIR$/sql_scripts/car.txt" />
       </list>
     </option>
   </component>
@@ -463,18 +475,20 @@
       <workItem from="1515678587247" duration="639000" />
       <workItem from="1515715215730" duration="11132000" />
       <workItem from="1515788655564" duration="21998000" />
-      <workItem from="1515859545779" duration="719000" />
+      <workItem from="1515859545779" duration="27758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49076000" />
+    <option name="totallyTimeSpent" value="76115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -482,12 +496,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3869565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34021738" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2196162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2196162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -500,7 +514,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -512,38 +525,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/domain/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/BusinessLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="125" column="40" lean-forward="true" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
-          <folding>
-            <element signature="method#getAllCars#0;class#BusinessLogic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/DAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -684,157 +671,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql_scripts/car.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="10" column="116" lean-forward="true" selection-start-line="10" selection-start-column="116" selection-end-line="10" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/BrandDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/CarDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/DriverDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/OrderDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/PersonDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/QualityDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/RoleDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/factories/DAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLDriverDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLCarDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1515860204652" expanded="true" signature="927:1281" ph="SELECT car.i... car" />
-            <marker date="1515860204652" expanded="true" signature="1542:1848" ph="SELECT car.i... car" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLBrandDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLOrderDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#406#407#0" expanded="false" />
-            <element signature="e#450#451#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1404#1405#0" expanded="false" />
-            <element signature="e#1442#1443#0" expanded="false" />
-            <element signature="e#1469#1470#0" expanded="false" />
-            <element signature="e#1516#1517#0" expanded="false" />
-            <element signature="e#1544#1545#0" expanded="false" />
-            <marker date="1515860205512" expanded="true" signature="591:708" ph="INSERT INTO order_list... " />
-            <marker date="1515860205512" expanded="true" signature="591:730" ph="INSERT INTO order_list... " />
-            <marker date="1515860205512" expanded="true" signature="1681:2079" ph="SELECT order... order_list" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLRoleDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#596#597#0" expanded="false" />
-            <element signature="e#624#625#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <marker date="1515860204802" expanded="true" signature="910:935" ph="SELECT * FRO... role" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLQualityDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -847,54 +687,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLPersonDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1620#1621#0" expanded="true" />
-            <element signature="e#1647#1648#0" expanded="true" />
-            <element signature="e#1697#1698#0" expanded="true" />
-            <element signature="e#1725#1726#0" expanded="true" />
-            <element signature="e#1761#1762#0" expanded="true" />
-            <element signature="e#1788#1789#0" expanded="true" />
-            <marker date="1515860205678" expanded="true" signature="665:825" ph="INSERT INTO person... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/BusinessLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding>
-            <element signature="method#getAllCars#0;class#BusinessLogic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/domain/Brand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/domain/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/domain/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -930,6 +723,232 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/BrandDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/QualityDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/RoleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/domain/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/DAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="43" lean-forward="true" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLQualityDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLBrandDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/domain/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLRoleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="50" column="31" lean-forward="false" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <element signature="e#891#897#0" expanded="true" />
+            <marker date="1515863817191" expanded="true" signature="1027:1052" ph="SELECT * FRO... role" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/OrderDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/DriverDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.44/mysql-connector-java-5.1.44.jar!/com/mysql/jdbc/jdbc2/optional/MysqlDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/MySqlDAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/PersonDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLDriverDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="38" column="119" lean-forward="false" selection-start-line="38" selection-start-column="119" selection-end-line="38" selection-end-column="119" />
+          <folding>
+            <element signature="method#selectDrivers#0;class#MySQLDriverDAO#0" expanded="false" />
+            <element signature="e#1357#1365#0" expanded="true" />
+            <marker date="1515890690143" expanded="true" signature="983:1015" ph="UPDATE orders.driver... " />
+            <marker date="1515890690143" expanded="true" signature="983:1060" ph="UPDATE orders.driver... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLPersonDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="method#insertPerson#0;class#MySQLPersonDAO#0" expanded="false" />
+            <element signature="e#1766#1767#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+            <element signature="e#3359#3360#0" expanded="true" />
+            <element signature="e#3387#3388#0" expanded="true" />
+            <element signature="e#3429#3430#0" expanded="true" />
+            <element signature="e#3456#3457#0" expanded="true" />
+            <marker date="1515891246679" expanded="true" signature="1934:2217" ph="SELECT perso... person" />
+            <marker date="1515891246679" expanded="true" signature="3565:3608" ph="SELECT COUNT... person" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLOrderDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="929">
+          <caret line="146" column="34" lean-forward="false" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
+          <folding>
+            <element signature="method#insertOrder#0;class#MySQLOrderDAO#0" expanded="false" />
+            <element signature="method#selectAllOrders#0;class#MySQLOrderDAO#0" expanded="false" />
+            <element signature="e#1760#1767#0" expanded="true" />
+            <element signature="e#4348#4355#0" expanded="true" />
+            <element signature="method#selectCount#0;class#MySQLOrderDAO#0" expanded="false" />
+            <marker date="1515890235039" expanded="true" signature="4455:5281" ph="SELECT order... order_list" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/CarDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql_scripts/car.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="135" lean-forward="false" selection-start-line="13" selection-start-column="135" selection-end-line="13" selection-end-column="135" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/persistence/dao/impl/MySQLCarDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding>
+            <element signature="method#deleteCar#0;class#MySQLCarDAO#0" expanded="false" />
+            <element signature="method#updateCar#0;class#MySQLCarDAO#0" expanded="false" />
+            <element signature="method#selectCars#0;class#MySQLCarDAO#0" expanded="false" />
+            <element signature="method#selectCarsByBrand#0;class#MySQLCarDAO#0" expanded="false" />
+            <element signature="method#selectCarsByQuality#0;class#MySQLCarDAO#0" expanded="false" />
+            <element signature="method#selectSortedByModel#0;class#MySQLCarDAO#0" expanded="false" />
+            <element signature="method#selectSortedByPrice#0;class#MySQLCarDAO#0" expanded="false" />
+            <element signature="method#select#0;class#MySQLCarDAO#0" expanded="false" />
+            <marker date="1515898787616" expanded="true" signature="744:823" ph="INSERT INTO orders_list.car... " />
+            <marker date="1515898787616" expanded="true" signature="744:882" ph="INSERT INTO orders_list.car... " />
+            <marker date="1515898787616" expanded="true" signature="1629:1673" ph="DELETE FROM order_list.car... " />
+            <marker date="1515898787616" expanded="true" signature="2066:2154" ph="UPDATE orders.car... " />
+            <marker date="1515898787616" expanded="true" signature="2400:2448" ph="SELECT car.i... car" />
+            <marker date="1515898787616" expanded="true" signature="4089:4371" ph="SELECT car.i... car" />
+            <marker date="1515898787616" expanded="true" signature="4089:4373" ph="SELECT car.i... car" />
+            <marker date="1515898787616" expanded="true" signature="4089:4380" ph="SELECT car.i... car" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/BusinessLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#makeOrder#0;class#BusinessLogic#0" expanded="false" />
+            <element signature="method#showOrders#0;class#BusinessLogic#0" expanded="false" />
+            <element signature="method#register#0;class#BusinessLogic#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/khpi/yesipov/project/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
           <folding />
         </state>
       </provider>

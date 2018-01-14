@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MySQLRoleDAO implements RoleDAO{
 
@@ -33,13 +35,23 @@ public class MySQLRoleDAO implements RoleDAO{
         return false;
     }
 
-    public ResultSet selectRoles() {
+    public List<Role> selectRoles() {
+        List<Role> roles = new ArrayList<Role>();
         try {
             statement = connection.createStatement();
-            return statement.executeQuery("SELECT * FROM orders.role;");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM orders.role;");
+            while (resultSet.next()) {
+                Role role = new Role();
+                role.setId(resultSet.getInt(1));
+                role.setRole(resultSet.getString(2));
+                roles.add(role);
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return roles;
     }
 }

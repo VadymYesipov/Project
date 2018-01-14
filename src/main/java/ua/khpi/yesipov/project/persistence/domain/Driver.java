@@ -10,5 +10,5 @@ public class Driver {
     private String name;
     private String surname;
 
-    private Boolean isBusy;
+    private Integer isBusy;
 }

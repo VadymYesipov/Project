@@ -9,13 +9,11 @@ public class Car {
 
     private Brand brand;
 
-    private String name;
+    private String model;
 
     private Quality quality;
 
-    private Integer hours;
-
     private Double price;
 
-    private Boolean isOrdered;
+    private Integer isOrdered;
 }

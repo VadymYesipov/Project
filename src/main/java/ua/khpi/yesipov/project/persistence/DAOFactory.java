@@ -1,4 +1,4 @@
-package ua.khpi.yesipov.project.factories;
+package ua.khpi.yesipov.project.persistence;
 
 import ua.khpi.yesipov.project.persistence.dao.*;
 

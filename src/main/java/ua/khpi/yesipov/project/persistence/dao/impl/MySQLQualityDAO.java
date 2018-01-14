@@ -5,6 +5,7 @@ import ua.khpi.yesipov.project.persistence.dao.QualityDAO;
 
 import javax.sql.RowSet;
 import java.sql.Connection;
+import java.util.List;
 
 public class MySQLQualityDAO implements QualityDAO{
 
@@ -30,7 +31,7 @@ public class MySQLQualityDAO implements QualityDAO{
         return false;
     }
 
-    public RowSet selectQualities() {
+    public List<Quality> selectQualities() {
         return null;
     }
 }
