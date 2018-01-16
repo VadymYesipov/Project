@@ -57,6 +57,17 @@ public class MySQLCarDAO implements CarDAO {
         return null;
     }
 
+    public boolean updateDamaged(Car car) {
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate("UPDATE orders.car SET quality_id=4 WHERE id=" + car.getId());
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public boolean updateCar(Car car) {
         try {
             statement = connection.createStatement();

@@ -136,11 +136,14 @@ public class BusinessLogic {
         String password = scanner.next();
         person.setPassword(password);
 
-        person = personDAO.findPerson(login, password);
+        person.setIsBlocked(0);
 
-        if (person.getFirstName() == null) {
+        Person copy = personDAO.findPerson(login, password);
+        if (copy.getFirstName() != null) {
             System.out.println("Goodbye");
             System.exit(0);
         }
+
+        personDAO.insertPerson(person);
     }
 }

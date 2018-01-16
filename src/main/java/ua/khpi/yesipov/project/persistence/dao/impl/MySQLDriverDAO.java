@@ -36,7 +36,7 @@ public class MySQLDriverDAO implements DriverDAO{
     public int updateDriver(Driver driver) {
         try {
             statement = connection.createStatement();
-            int i = statement.executeUpdate("UPDATE orders.driver SET isBusy=" + driver.getIsBusy() + " WHERE id>0 and id=" + driver.getId());
+            int i = statement.executeUpdate("UPDATE orders.driver SET isBusy=" + driver.getIsBusy() + " WHERE id>1 and id=" + driver.getId());
 
             statement.close();
             connection.close();

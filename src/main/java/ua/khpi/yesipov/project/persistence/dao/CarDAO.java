@@ -15,6 +15,8 @@ public interface CarDAO {
 
     public Car findCar(int id);
 
+    public boolean updateDamaged(Car car);
+
     //admin
     public boolean updateCar(Car car);
 

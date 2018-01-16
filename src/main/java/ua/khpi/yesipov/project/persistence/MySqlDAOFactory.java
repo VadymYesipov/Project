@@ -17,6 +17,11 @@ public class MySqlDAOFactory implements DAOFactory {
     private MysqlDataSource mysqlDataSource;
 
     public MySqlDAOFactory() {
+        try {
+            Class.forName(DRIVER);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         mysqlDataSource = new MysqlDataSource();
         mysqlDataSource.setURL(DB_URL);
         mysqlDataSource.setUser("root");

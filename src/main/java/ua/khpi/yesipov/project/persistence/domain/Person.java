@@ -19,4 +19,6 @@ public class Person {
 
     private String login;
     private String password;
+
+    private Integer isBlocked;
 }

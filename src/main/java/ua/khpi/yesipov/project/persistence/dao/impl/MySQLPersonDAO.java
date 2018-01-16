@@ -24,8 +24,8 @@ public class MySQLPersonDAO implements PersonDAO {
     public int insertPerson(Person person) {
         try {
             preparedStatement = connection.prepareStatement(
-                    "INSERT INTO person (id, role_id, first_name, middle_name, last_name, birthday, login, password) " +
-                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+                    "INSERT INTO person (id, role_id, first_name, middle_name, last_name, birthday, login, password, isBlocked) " +
+                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
             preparedStatement.setInt(1, person.getId());
             preparedStatement.setInt(2, person.getRole().getId());
             preparedStatement.setString(3, person.getFirstName());
@@ -34,6 +34,7 @@ public class MySQLPersonDAO implements PersonDAO {
             preparedStatement.setDate(6, person.getBirthday());
             preparedStatement.setString(7, person.getLogin());
             preparedStatement.setString(8, person.getPassword());
+            preparedStatement.setInt(9, person.getIsBlocked());
 
             int updated = preparedStatement.executeUpdate();
             preparedStatement.close();
@@ -54,7 +55,7 @@ public class MySQLPersonDAO implements PersonDAO {
             preparedStatement = connection.prepareStatement("SELECT person.id, role.id, role.role, first_name, middle_name, last_name, birthday, login, password " +
                     "FROM orders.person person  " +
                     "LEFT JOIN orders.role role on person.role_id=role.id " +
-                    "WHERE login=? and password=?;");
+                    "WHERE login=? and password=? and isBlocked=0 and role_id=2;");
 
             preparedStatement.setString(1, login);
             preparedStatement.setString(2, password);
